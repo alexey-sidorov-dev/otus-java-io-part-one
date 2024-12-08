@@ -1,13 +1,13 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import ru.otus.java.basic.io.Main;
+import ru.otus.java.basic.io.App;
 
-public class MainTest {
+public class AppTest {
 
   @Test
   public void testMain() {
     Assertions.assertDoesNotThrow(() -> {
-      Main.main(new String[]{});
+      App.main(new String[]{});
     });
   }
 }

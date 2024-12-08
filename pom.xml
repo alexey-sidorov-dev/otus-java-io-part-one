@@ -51,6 +51,30 @@
         <artifactId>jacoco-maven-plugin</artifactId>
         <version>0.8.12</version>
       </plugin>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.3.1</version>
+        <executions>
+          <execution>
+            <id>copy-resource-one</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/files</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>files</directory>
+                  <includes>
+                    <include>foo.txt</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 
